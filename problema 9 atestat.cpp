@@ -5,7 +5,7 @@ using namespace std;
 int main() 
 {
     ofstream fout("date.out");
-    int m[21][21],k,n;
+    int m[21][21],k,n,ok=0;
     cin>>n;
     cin>>k;
     for (int i=1;i<=n;i++){
@@ -34,7 +34,11 @@ int main()
         }
         if (prim==1){
           fout<<m[i][j]<<' ';
+            ok=1;
         }
+          if (ok==0){
+          cout<<"NU";
+          }
       }
     }    
     
